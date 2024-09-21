@@ -1,21 +1,16 @@
-import React from 'react';
-import './App.scss';
+import styles from './App.module.scss';
+import { Header } from './components/Header';
+import { Outlet } from 'react-router-dom';
+import { Footer } from './components/Footer';
 
-interface Props {
-  onClick: () => void;
-  children: React.ReactNode;
-}
-
-export const Provider: React.FC<Props> = React.memo(({ onClick, children }) => (
-  <button type="button" onClick={onClick}>
-    {children}
-  </button>
-));
-
-export const App: React.FC = () => {
+export const App = () => {
   return (
-    <div className="starter">
-      <Provider onClick={() => ({})}>TodoList</Provider>
+    <div className={styles.app}>
+      <Header />
+      <div className={styles.container}>
+        <Outlet />
+      </div>
+      <Footer />
     </div>
   );
 };
