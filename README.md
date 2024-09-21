@@ -11,11 +11,11 @@ API: Used for managing Todos and synchronizing data with the server.
 Git: For version control.
 ESLint: For static code analysis and maintaining code quality.
 
-[DEMO LINK]()
+[DEMO LINK](https://andreyysak.github.io/phone-catalog/)
 
 Instructions to Run Locally
 
-1.Clone the repository from GitHub: -git clone [https://github.com/getchards/todo-app.git](https://github.com/andreyysak/phone-catalog.git)
+1.Clone the repository from GitHub: -git clone [https://github.com/andreyysak/phone-catalog.git]
 2.Navigate to the project directory: -cd repository
 3.Install dependencies: -npm install
 4.Start the project:
