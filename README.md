@@ -1,6 +1,6 @@
 Project Description
 
-This project is a Todo application that allows users to manage their tasks efficiently. It demonstrates the use of modern React features, state management, and API integration to provide a smooth user experience. The application is built with React and styled using SCSS, following best practices for clean code and maintainability.
+This project is a Phone Catalog application that allows users to browse and manage a collection of mobile devices. It demonstrates the use of modern React features, effective state management, and API integration to create a user-friendly experience. The application is built with React and styled using SCSS, following best practices for clean code and maintainability.
 
 Technologies Used
 
