@@ -2,7 +2,6 @@ import { useContext, useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { ProductContext } from '../../context/ProductContext';
 import styles from './Breadcrumbs.module.scss';
-import { BASE_URL } from '../../utils/const';
 
 type Breadcrumb = {
   name: string;
@@ -41,16 +40,12 @@ const Breadcrumbs = () => {
   return (
     <div className={styles.breadcrumbs}>
       <Link to="/" className={styles.homeLink}>
-        <img
-          src={`${BASE_URL}/icons/Home.svg`}
-          alt="Home"
-          className={styles.icon}
-        />
+        <img src={'./icons/Home.svg'} alt="Home" className={styles.icon} />
       </Link>
       {breadcrumbs.map(({ name, path, isLast }) => (
         <span key={path} className={styles.breadcrumbItem}>
           <img
-            src={`${BASE_URL}/icons/ArrowRight.svg`}
+            src={'./icons/ArrowRight.svg'}
             alt="ArrowRight"
             className={styles.arrow}
           />

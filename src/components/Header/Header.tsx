@@ -1,6 +1,5 @@
 import { useContext, useEffect, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import { BASE_URL } from '../../utils/const';
 import styles from './Header.module.scss';
 import classNames from 'classnames';
 import { OverlayMenu } from '../OverlayMenu';
@@ -39,11 +38,7 @@ const Header = () => {
       <header className={styles.header}>
         <div className={styles.content}>
           <Link to="/" className={styles.logoLink}>
-            <img
-              src={`${BASE_URL}/img/Logo.png`}
-              alt="Logo"
-              className={styles.logo}
-            />
+            <img src="./img/Logo.png" alt="Logo" className={styles.logo} />
           </Link>
 
           <nav className={styles.nav}>
@@ -74,7 +69,7 @@ const Header = () => {
 
         <div className={styles.icons}>
           <NavLink to="/favorites" className={classActiveIcon}>
-            <img src={`${BASE_URL}/icons/Favorites.svg`} alt="Favorites" />
+            <img src={'./icons/Favorites.svg'} alt="Favorites" />
             {favorites.length > 0 && (
               <span className={styles.count}>
                 <p className={styles.countText}>{favorites.length}</p>
@@ -82,7 +77,7 @@ const Header = () => {
             )}
           </NavLink>
           <NavLink to="/cart" className={classActiveIcon}>
-            <img src={`${BASE_URL}/icons/Cart.svg`} alt="Cart" />
+            <img src={'./icons/Cart.svg'} alt="Cart" />
             {totalItemsInCart > 0 && (
               <span className={styles.count}>
                 <p className={styles.countText}>{totalItemsInCart}</p>
@@ -93,11 +88,7 @@ const Header = () => {
         <div className={styles.menuBlock}>
           <button className={styles.menuButton} onClick={toggleOpenMenu}>
             <img
-              src={
-                isOpen
-                  ? `${BASE_URL}/icons/Close.svg`
-                  : `${BASE_URL}/icons/Burger.svg`
-              }
+              src={isOpen ? './icons/Close.svg' : './icons/Burger.svg'}
               alt="Menu"
               className={styles.burger}
             />

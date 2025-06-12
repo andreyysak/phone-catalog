@@ -1,6 +1,5 @@
 import styles from './Footer.module.scss';
 import { Link } from 'react-router-dom';
-import { BASE_URL } from '../../utils/const';
 
 const Footer = () => {
   const handleScrollToTop = () => {
@@ -11,11 +10,7 @@ const Footer = () => {
     <footer className={styles.footer}>
       <div className={styles.container}>
         <Link to="/" className={styles.logoBlock}>
-          <img
-            src={`${BASE_URL}/img/Logo.png`}
-            alt="Logo"
-            className={styles.logo}
-          />
+          <img src={'./img/Logo.png'} alt="Logo" className={styles.logo} />
         </Link>
 
         <ul className={styles.list}>
@@ -38,7 +33,7 @@ const Footer = () => {
           <span className={styles.span}>Back to top</span>
           <button className={styles.buttonTop} onClick={handleScrollToTop}>
             <img
-              src={`${BASE_URL}/icons/ArrowUp.svg`}
+              src={'./icons/ArrowUp.svg'}
               alt="Back to top"
               className={styles.arrow}
             />

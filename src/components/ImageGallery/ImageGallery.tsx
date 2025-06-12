@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import styles from './ImageGallery.module.scss';
-import { BASE_URL } from '../../utils/const';
 import classNames from 'classnames';
 
 interface Props {
@@ -26,7 +25,7 @@ const ImageGallery: React.FC<Props> = ({ images, name }) => {
         {images.map(image => (
           <img
             key={image}
-            src={`${BASE_URL}/${image}`}
+            src={`./${image}`}
             alt={`${name}`}
             className={classNames(styles.thumbnail, {
               [styles.selectedThumbnail]: image === selectedImage,
@@ -40,7 +39,7 @@ const ImageGallery: React.FC<Props> = ({ images, name }) => {
         {images.map((image, index) => (
           <img
             key={image}
-            src={`${BASE_URL}/${image}`}
+            src={`./${image}`}
             alt={name}
             className={classNames(styles.mainImage, {
               [styles.mainImageActive]: index === activeIndex,
@@ -52,7 +51,7 @@ const ImageGallery: React.FC<Props> = ({ images, name }) => {
         {images.map(image => (
           <img
             key={image}
-            src={`${BASE_URL}/${image}`}
+            src={`./${image}`}
             alt={`${name}`}
             className={classNames(styles.thumbnail, {
               [styles.selectedThumbnail]: image === selectedImage,

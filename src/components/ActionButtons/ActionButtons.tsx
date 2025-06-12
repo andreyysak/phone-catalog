@@ -2,7 +2,6 @@
 import React, { useContext } from 'react';
 import styles from './ActionButtons.module.scss';
 import { Product } from '../../types/Product';
-import { BASE_URL } from '../../utils/const';
 import { ProductContext } from '../../context/ProductContext';
 
 interface Props {
@@ -41,9 +40,7 @@ const ActionButtons: React.FC<Props> = ({ product }) => {
         }}
       >
         <img
-          src={`${BASE_URL}/icons/${
-            isFavorite ? 'FavoritesRed' : 'Favorites'
-          }.svg`}
+          src={`./icons/${isFavorite ? 'FavoritesRed' : 'Favorites'}.svg`}
           alt="Favorite"
         />
       </button>

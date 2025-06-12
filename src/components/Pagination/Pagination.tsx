@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from './Pagination.module.scss';
-import { BASE_URL } from '../../utils/const';
 
 interface Props {
   currentPage: number;
@@ -68,7 +67,7 @@ const Pagination: React.FC<Props> = ({
         disabled={currentPage === 1}
         className={styles.button}
       >
-        <img src={`${BASE_URL}/icons/ArrowLeft.svg`} alt="Previous" />
+        <img src={'./icons/ArrowLeft.svg'} alt="Previous" />
       </button>
       <div className={styles.numbers}>{renderPageNumbers()}</div>
       <button
@@ -76,7 +75,7 @@ const Pagination: React.FC<Props> = ({
         disabled={currentPage === totalPages}
         className={styles.button}
       >
-        <img src={`${BASE_URL}/icons/ArrowRight.svg`} alt="Next" />
+        <img src={'./icons/ArrowRight.svg'} alt="Next" />
       </button>
     </div>
   );

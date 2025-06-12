@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from './ProductCard.module.scss';
-import { BASE_URL } from '../../utils/const';
 import { Product } from '../../types/Product';
 import { Link } from 'react-router-dom';
 import { ActionButtons } from '../ActionButtons';
@@ -19,11 +18,7 @@ const ProductCard: React.FC<Props> = ({ product }) => {
         to={`/${category}/${product.itemId}`}
         className={styles.imageContainer}
       >
-        <img
-          className={styles.image}
-          src={`${BASE_URL}/${image}`}
-          alt="Product"
-        />
+        <img className={styles.image} src={`./${image}`} alt="Product" />
       </Link>
 
       <div className={styles.wrapper}>

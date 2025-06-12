@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import { BASE_URL } from '../../utils/const';
 import styles from './Cart.module.scss';
 import { useContext } from 'react';
 import { ProductContext } from '../../context/ProductContext';
@@ -14,7 +13,7 @@ const Cart = () => {
       {cart.length > 0 ? (
         <div>
           <Link to="/" className={styles.breadcrumbs}>
-            <img src={`${BASE_URL}/icons/ArrowLeft.svg`} alt="ArrowLeft" />
+            <img src={'./icons/ArrowLeft.svg'} alt="ArrowLeft" />
             <span className={styles.back}>Back</span>
           </Link>
           <h1 className={styles.title}>Cart</h1>
@@ -34,7 +33,7 @@ const Cart = () => {
       ) : (
         <div className={styles.empty}>
           <img
-            src={`${BASE_URL}/img/cart-is-empty.png`}
+            src={'./img/cart-is-empty.png'}
             alt="cart-is-empty"
             className={styles.emptyImg}
           />

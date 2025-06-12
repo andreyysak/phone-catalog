@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import styles from './ProductSlider.module.scss';
-import { BASE_URL } from '../../utils/const';
 import { ProductCard } from '../ProductCard';
 import classNames from 'classnames';
 import { Product } from '../../types/Product';
@@ -60,7 +59,7 @@ const ProductSlider: React.FC<Props> = ({ title, products }) => {
               [styles.isDisabled]: dissabledPrevButton,
             })}
           >
-            <img src={`${BASE_URL}/icons/ArrowLeft.svg`} alt="Previous" />
+            <img src={'./icons/ArrowLeft.svg'} alt="Previous" />
           </button>
 
           <button
@@ -69,7 +68,7 @@ const ProductSlider: React.FC<Props> = ({ title, products }) => {
               [styles.isDisabled]: dissabledNextButton,
             })}
           >
-            <img src={`${BASE_URL}/icons/ArrowRight.svg`} alt="Next" />
+            <img src={'./icons/ArrowRight.svg'} alt="Next" />
           </button>
         </div>
       </div>

@@ -199,7 +199,7 @@ export const ProductProvider: React.FC<Props> = ({ children }) => {
       updateCart(productId, quantity + 1);
       setTotalItemsInCart(prev => prev + 1);
     },
-    [updateCart, cart, totalItemsInCart],
+    [updateCart],
   );
 
   const decrease = useCallback(
@@ -209,7 +209,7 @@ export const ProductProvider: React.FC<Props> = ({ children }) => {
         setTotalItemsInCart(prev => prev - 1);
       }
     },
-    [updateCart, cart],
+    [updateCart],
   );
 
   useEffect(() => {
@@ -281,6 +281,7 @@ export const ProductProvider: React.FC<Props> = ({ children }) => {
       error,
       allProducts,
       suggestedProducts,
+      setCart,
       setLoading,
       setError,
       addToFavorite,

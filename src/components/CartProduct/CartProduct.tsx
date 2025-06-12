@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import styles from './CartProduct.module.scss';
 import { Product } from '../../types/Product';
-import { BASE_URL } from '../../utils/const';
 import { ProductContext } from '../../context/ProductContext';
 
 interface Props {
@@ -20,7 +19,7 @@ const CartProduct: React.FC<Props> = ({ product, quantity }) => {
             className={styles.remove}
             onClick={() => removeFromCart(product.id)}
           >
-            <img src={`${BASE_URL}/icons/Close.svg`} alt="Delete" />
+            <img src={'./icons/Close.svg'} alt="Delete" />
           </button>
           <img
             src={product.image}
@@ -36,14 +35,14 @@ const CartProduct: React.FC<Props> = ({ product, quantity }) => {
               className={styles.action}
               onClick={() => decrease(product.id, quantity)}
             >
-              <img src={`${BASE_URL}/icons/Minus.svg`} alt="Minus" />
+              <img src={'./icons/Minus.svg'} alt="Minus" />
             </button>
             <span className={styles.count}>{quantity}</span>
             <button
               className={styles.action}
               onClick={() => increase(product.id, quantity)}
             >
-              <img src={`${BASE_URL}/icons/Plus.svg`} alt="Plus" />
+              <img src={'./icons/Plus.svg'} alt="Plus" />
             </button>
           </div>
           <p className={styles.productPrice}>{`$${product.price}`}</p>

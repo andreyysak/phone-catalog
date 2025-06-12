@@ -1,7 +1,6 @@
 import { useContext } from 'react';
 import styles from './Category.module.scss';
 import { ShopByCategoryMap } from '../../helpers/ShopCategory';
-import { BASE_URL } from '../../utils/const';
 import { Link } from 'react-router-dom';
 import { ProductContext } from '../../context/ProductContext';
 
@@ -38,7 +37,7 @@ const Category = () => {
                 style={{ backgroundColor: item.color }}
               >
                 <img
-                  src={`${BASE_URL}/${item.src}`}
+                  src={`./${item.src}`}
                   alt={item.title}
                   className={styles.image}
                 />

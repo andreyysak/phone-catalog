@@ -4,7 +4,6 @@ import styles from './ProductDetail.module.scss';
 import { Link, useParams } from 'react-router-dom';
 import { ProductContext } from '../../context/ProductContext';
 import { Breadcrumbs } from '../Breadcrumbs';
-import { BASE_URL } from '../../utils/const';
 import { ImageGallery } from '../ImageGallery';
 import { ProductDetails } from '../../types/ProductDetail';
 import { getProductDetail } from '../../services/ProductDetail';
@@ -86,7 +85,7 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ category }) => {
       <Breadcrumbs />
       <Link to="/" className={styles.goBackButton}>
         <img
-          src={`${BASE_URL}/icons/ArrowLeft.svg`}
+          src={'./icons/ArrowLeft.svg'}
           alt="home"
           className={styles.chevronIcon}
         />

@@ -3,11 +3,11 @@ import { ShuffleArray } from '../utils/ShuffleArray';
 import { getData } from '../utils/client';
 
 export const getAllProduct = async (): Promise<Product[]> => {
-  return getData<Product[]>('./api/products.json');
+  return getData<Product[]>('/api/products.json');
 };
 
 export const getHotPriceProducts = () => {
-  return getData<Product[]>('./api/products.json').then(res => res);
+  return getData<Product[]>('/api/products.json').then(res => res);
 };
 
 export const getNewProducts = async () => {

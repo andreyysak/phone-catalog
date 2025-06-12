@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import styles from './PictureSlider.module.scss';
 import classNames from 'classnames';
 import { Link } from 'react-router-dom';
-import { BASE_URL } from '../../utils/const';
 import { PicturesSliderMap } from '../../helpers/PicturesSliderMap';
 
 const PictureSlider = () => {
@@ -35,7 +34,7 @@ const PictureSlider = () => {
         onClick={handlePrevClick}
       >
         <img
-          src={`${BASE_URL}/icons/ArrowLeft.svg`}
+          src={'./icons/ArrowLeft.svg'}
           alt="Previous"
           className={styles.buttonIcon}
         />
@@ -44,7 +43,7 @@ const PictureSlider = () => {
         {PicturesSliderMap.map(({ id, src, title }) => (
           <Link to={`/${title}`} key={id} className={styles.link}>
             <img
-              src={`${BASE_URL}/${src}`}
+              src={`./${src}`}
               alt={`Slide ${title}`}
               className={styles.image}
               style={{
@@ -58,7 +57,7 @@ const PictureSlider = () => {
         className={classNames(styles.button, styles.next)}
         onClick={handleNextClick}
       >
-        <img src={`${BASE_URL}/icons/ArrowRight.svg`} alt="Next" />
+        <img src={'./icons/ArrowRight.svg'} alt="Next" />
       </button>
 
       <div className={styles.dashes}>
