@@ -3,11 +3,11 @@ import { ShuffleArray } from '../utils/ShuffleArray';
 import { getData } from '../utils/client';
 
 export const getAllProduct = async (): Promise<Product[]> => {
-  return getData<Product[]>('/api/products.json');
+  return getData<Product[]>('./api/products.json');
 };
 
 export const getHotPriceProducts = () => {
-  return getData<Product[]>('/api/products.json').then(res => res);
+  return getData<Product[]>('./api/products.json').then(res => res);
 };
 
 export const getNewProducts = async () => {
@@ -23,13 +23,13 @@ export const getNewProducts = async () => {
 };
 
 export const getProductsByCategory = async (category: string) => {
-  const products = await getData<Product[]>('/api/products.json');
+  const products = await getData<Product[]>('./api/products.json');
 
   return products.filter((product: Product) => product.category === category);
 };
 
 export const getSuggestedProducts = async () => {
-  const products = await getData<Product[]>('/api/products.json');
+  const products = await getData<Product[]>('./api/products.json');
   const suggestedProducts = ShuffleArray(products);
 
   return suggestedProducts;
